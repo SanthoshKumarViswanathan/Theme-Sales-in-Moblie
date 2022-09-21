@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product sales App</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+</head>
+
+<style>
+    .pagination,.dataTables_info,aside,.main-sidebar {
+        display: none;
+    }
+
+    .wrapper{
+        margin-left: 0% !important;
+    }
+</style>
+<body>
+
+<div class="wrapper">
+  <!-- Navbar -->
+ 
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+            <button type="submit" class="btn btn-info btn-sm">&nbsp;&nbsp;Invoice</button>&nbsp;
+            <button type="submit" class="btn btn-info btn-sm">&nbsp;&nbsp;Save</button>&nbsp;
+            <button type="submit" class="btn btn-info btn-sm">&nbsp;&nbsp;Close</button>&nbsp;<span>&nbsp;|&nbsp;</span>
+            <button type="submit" class="btn btn-info btn-sm">&nbsp;&nbsp;Print</button>&nbsp;<span>&nbsp;|&nbsp;</span>
+            <button type="button" class="btn btn-info btn-sm">&nbsp;&nbsp;New</button>
+            <!-- <button type="button" class="btn btn-primary"data-toggle="model" data-toggle="model" data-target="#model-account">hi</button> -->
+        </div>
+      </div><!-- /.container-fluid -->
+
+      <!-- model-Account -->
+      <div class="modal fade" id="model-account">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+           
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             
+              <form>
+
+                <div class="card-body">                  
+                    
+                    <div class="form-group">
+                      <label>Product ID</label>
+
+                      <select class="form-control select2" style="width: 100%;">                        
+                        <option selected="selected">P01 - Apple</option>
+                        <option>P02 - Samsung</option>
+                        <option>P03 - Google</option>
+                        
+                      </select>
+                    </div>
+                  
+
+                  <div class="form-group">
+                    <label for="">Quantity</label>
+                    <input type="number" class="form-control" id="" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="">List price</label>
+                    <input type="number" class="form-control" id="" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="">Discount(%)</label>
+                    <input type="number" class="form-control" id="" placeholder="">
+                  </div>
+                  
+                </div>
+                <!-- /.card-body -->
+
+                
+              </form>
+
+                <div class="modal-footer justify-content-end">
+                  <button type="button" class="btn btn-info" data-dismiss="modal">Add</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              
+                </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+
+
+    </section>
+
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+      
+
+        <div class="row">
+
+          <div class="col-12">
+
+                <div class="card ">
+                  <div class="card-header">
+    
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button> -->
+                    </div>
+                  
+                    <div class="form-group">
+                      <label>Account</label>
+                      <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">Alabama</option>
+                        <option>Alaska</option>
+                        <option>California</option>
+                        <option>Delaware</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Washington</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+    
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Name </label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" disabled>
+                    </div>
+    
+                    <div class="form-group">
+                            <label>Address</label>
+                            <textarea class="form-control" rows="3" placeholder="Enter ..." disabled></textarea>
+                    </div>
+    
+                    <div class="form-group">
+                      <label for="">Date</label>
+                      <input type="date" class="form-control" disabled>
+                    </div>
+    
+                    <div class="form-group">
+                      <label>Currency</label>
+                      <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">INR - Indian Rupee</option>
+                        <option>USD - US</option>
+                        <option>EUR - Euro</option>
+                      </select>
+                    </div>
+                    
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+          
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">
+                    <button type="submit" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#model-account">&nbsp;&nbsp;Add Row</button>&nbsp;<span>&nbsp;|&nbsp;</span>
+                    <button type="submit" class="btn btn-secondary btn-sm">&nbsp;&nbsp;Remove</button>&nbsp;<span>&nbsp;&nbsp;</span>
+                    <!-- <button type="submit" class="btn btn-secondary btn-sm" disabled>&nbsp;&nbsp;Cancel</button>&nbsp;<span></span> -->
+                </span>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+  
+                  <thead>
+                  <tr>
+                    <th>Product ID&nbsp;
+                      
+                    </th>
+                    <th>Quantity</th>
+                    <th>Gross Value</th>
+                    
+                    <th>discount(%)</th>
+                    <th>Gross Price</th>
+                    <th>List Price&nbsp;</th>
+                    
+                  </tr>
+                  </thead>
+                  <tbody style="text-align: justify;">
+  
+                    <tr>
+                      <td>
+                        <span>10000 - Ball</span>
+                      </td>
+  
+                     
+                        <td>
+                          <span>1&nbsp;</span><span>ea</span>
+                      </td>
+  
+                      
+                        
+                      <td>
+                            <span>100.00&nbsp;</span>
+                            <span>INR</span>
+                          
+                      </td>
+  
+                      
+                        <td>
+                          <span>0&nbsp;</span><span>%</span>
+                      </td>
+
+                      <td>
+                        <span>100.00&nbsp;</span>
+                        <span>INR</span>
+                      </td>
+
+                      <td>
+                        <span>100.00&nbsp;</span><span>INR</span>
+                      </td>
+                      
+                    </tr>
+  
+                  </tbody>
+                  <tfoot>
+                 
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-header">
+
+        <div class="container-fluid">
+
+          <div class="row">
+
+            <div class="col-sm-12 d-flex justify-content-end">
+              <div class="card card-outline card-secondary">
+
+                <!-- <div class="card card-header" style="background-color: white;box-shadow: none;">
+                  <input type="button" value="Action" class="btn btn-secondary btn-sm col-2">
+                </div> -->
+        
+                <div class="card-body">
+        
+                  <div class="row">
+        
+                    <div class="col-5 p-1">
+                      <label>Total Item Gross Value :</label>
+                    </div>
+        
+                    <div class="col-7 p-1">
+                      <span>200.00 INR</span>
+                    </div>
+                   
+                  </div>
+        
+                  <div class="row">
+        
+                    <div class="col-5 p-1">
+                      <label>Gross Overall Discount (%) :</label>
+                    </div>
+        
+                    <div class="col-7 p-1">
+                      <input type="number" class="form-control" placeholder="">
+                    </div>
+                   
+                  </div>
+        
+                  <div class="row">
+        
+                    <div class="col-5 p-1">
+                      <label>Taxes :</label>
+                    </div>
+        
+                    <div class="col-7 p-1">
+                        <span>200.00 INR</span>
+                    </div>
+                   
+                  </div>
+        
+                  <div class="row">
+        
+                    <div class="col-5 p-1">
+                      <label>Total :</label>
+                    </div>
+        
+                    <div class="col-7 p-1">
+                        <span>201.00 INR</span>
+                    </div>
+                   
+                  </div>
+        
+                  
+                  </div>
+        
+                </div>
+                <!-- /.card-body -->
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+    </section>
+
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer" style="text-align: center;">
+    <!-- <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.2.0
+    </div> -->
+    <strong>Copyright &copy; 2018-2022 <a href="https://nipurnait.com">NipurnaiIT</a>.</strong> <br> 
+    <span style="white-space: pre;">All rights reserved.</span>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Select2 -->
+<script src="../../plugins/select2/js/select2.full.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../plugins/jszip/jszip.min.js"></script>
+<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+    $('#myTable').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+
+    $('.select2').select2();
+
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+
+
+  });
+</script>
+</body>
+</html>

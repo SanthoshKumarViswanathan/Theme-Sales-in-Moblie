@@ -1,0 +1,35 @@
+Sales...
+
+Save, Invoice, Release, Close, Print, New
+
+New -> popup -> name (Dropdown)
+
+Name :  ---dropdown with popup-----
+		
+popups : acc Id, name, City (table with search)
+
+Address : empty (filled by popup)
+
+Date : input-type date
+
+Currency : Dropdown
+
+Organizational assignment : only mandatories
+
+
+Items---
+
+Add row , Remove  - buttons
+
+-------- Table ------
+Default 1 Qt , List price (editable) 
+
+Add row ---
+Stock Column creation
+
+java Crystal Report generation
+ 
+
+Admin / Employee Panel....
+
+Admin - Stock transfer, sync-button (LDB to SAP_DB) -> App to SAP (or) SAP to App
